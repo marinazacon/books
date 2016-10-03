@@ -1,5 +1,5 @@
 # Books
-A simple Book module for handle a personal library
+A simple Book module for handle a personal library at your home.
 
 ## Prerequisites
 You will need:
