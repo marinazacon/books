@@ -1,3 +1,23 @@
-<h1><?php echo $this->var1 ?></h1>
-<small>Presentazione del progetto!</small>
+<?php
+    $form = $this->form;
+    $form->prepare();
+    $form->setAttribute('action', $this->url(NULL, array('controller'=>'categories', 'action' => 'save')));
+    $form->setAttribute('method', 'post');
 
+
+    echo $this->form()->openTag($form);
+?>
+
+<h1>Category</h1>
+<small>Insert a new category</small>
+
+
+<?php echo $this->formLabel($form->get('title')); ?>
+<?php echo $this->formElement($form->get('title')); ?>
+<?php echo $this->formElementErrors($form->get('title')); ?>
+
+
+<?php echo $this->formElement($form->get('id')); ?>
+<?php echo $this->formElement($form->get('submit')); ?>
+
+<?php echo $this->form()->closeTag() ?>
