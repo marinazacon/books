@@ -17,8 +17,9 @@ class IndexControllerFactory implements FactoryInterface
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
         $realServiceLocator = $serviceLocator->getServiceLocator();
+        $categoryService = $realServiceLocator->get('CategoryService');
         $form = $realServiceLocator->get('FormElementManager')->get('Categories\Form\CategoryForm');
         $filter = $realServiceLocator->get('CategoryFilter');
-        return new IndexController($form, $filter);
+        return new IndexController($categoryService, $form, $filter);
     }
 }

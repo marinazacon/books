@@ -9,7 +9,14 @@ namespace Categories\Entity;
 
 class Category implements CategoryInterface
 {
+    /**
+     * @var int
+     */
     public $id;
+
+    /**
+     * @var string
+     */
     public $title;
 
     /**
